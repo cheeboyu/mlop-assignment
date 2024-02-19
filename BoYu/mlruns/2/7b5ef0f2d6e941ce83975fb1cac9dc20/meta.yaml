@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/7b5ef0f2d6e941ce83975fb1cac9dc20/artifacts
+deleted_time: null
+end_time: null
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 7b5ef0f2d6e941ce83975fb1cac9dc20
+run_name: Random Forest Regressor
+run_uuid: 7b5ef0f2d6e941ce83975fb1cac9dc20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707385278914
+status: 1
+tags: []
+user_id: boyuc

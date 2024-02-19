@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/9fef96c4102b401080d2545e0c5fb094/artifacts
+end_time: 1707382545013
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 9fef96c4102b401080d2545e0c5fb094
+run_name: CatBoost Regressor
+run_uuid: 9fef96c4102b401080d2545e0c5fb094
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707382544639
+status: 3
+tags: []
+user_id: boyuc

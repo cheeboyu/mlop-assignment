@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1
+creation_time: 1706975965124
+experiment_id: '1'
+last_update_time: 1706975965124
+lifecycle_stage: active
+name: rental_price_experiment

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/f0cfe2d6d1c2413dacf113ad2640771d/artifacts
+end_time: 1707375655897
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: f0cfe2d6d1c2413dacf113ad2640771d
+run_name: Ridge Regression
+run_uuid: f0cfe2d6d1c2413dacf113ad2640771d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707375655556
+status: 3
+tags: []
+user_id: boyuc

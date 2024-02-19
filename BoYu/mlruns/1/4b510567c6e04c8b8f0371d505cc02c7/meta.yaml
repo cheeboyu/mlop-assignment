@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/4b510567c6e04c8b8f0371d505cc02c7/artifacts
+end_time: 1706977171889
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 4b510567c6e04c8b8f0371d505cc02c7
+run_name: thundering-donkey-58
+run_uuid: 4b510567c6e04c8b8f0371d505cc02c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706977165960
+status: 3
+tags: []
+user_id: boyuc

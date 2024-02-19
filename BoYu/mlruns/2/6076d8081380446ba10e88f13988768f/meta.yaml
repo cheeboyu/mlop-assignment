@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/6076d8081380446ba10e88f13988768f/artifacts
+end_time: 1707148330917
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 6076d8081380446ba10e88f13988768f
+run_name: Extreme Gradient Boosting
+run_uuid: 6076d8081380446ba10e88f13988768f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707148330518
+status: 3
+tags: []
+user_id: boyuc

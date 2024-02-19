@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content%}
+
+<!-- slideshow -->
+<div class="container-fluid">
+    <div class="row">
+        <div id="slideshow">
+            <div class="slide-wrapper">
+                <div class="slide"> 
+                    <img src="static/images/rental_1.jpg" style="width:100%">
+                </div>
+
+                <div class="slide">
+                    <img src="static/images/rental_2.jpg" style="width:100%">
+                </div>
+
+                <div class="slide">
+                    <img src="static/images/mushroom1.jpg" style="width:100%">
+                </div>
+
+                <div class="slide">
+                    <img src="static/images/mushroom2.jpg" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+
+<!-- Introduction -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center mb-4">Welcome to our Machine Learning Model Prediction and Classification!</h1>
+            <p class="lead">Our platform allows you to train machine learning models for various tasks using different datasets. Here are some key features:</p>
+            <ul>
+                <li>Choose from a variety of datasets to train your models.</li>
+                <li>Train your models using state-of-the-art algorithms.</li>
+                <li>Make predictions and evaluate model performance with ease.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Available Datasets -->
+<div class="container box-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-4">Datasets Available</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Rental Price Prediction</h3>
+                    <p class="card-text">Predict the rental price of budget accommodation provided by Homely Hotels and Homes.</p>
+                    <a href="/rental" class="btn btn-primary">Rental Price Prediction</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Mushroom Edibility Classification</h3>
+                    <p class="card-text">Determine if a mushroom species is poisonous based on its attributes given in the dataset.</p>
+                    <a href="/mushroom" class="btn btn-primary">Mushroom Edibility Classification</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<!-- Example Use Cases -->
+<div class="container box-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-4">Example Use Cases</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Landlords can use our platform to predict rental prices for their properties. Mushroom enthusiasts can quickly determine the edibility of mushrooms they find in the wild.</p>
+        </div>
+    </div>
+</div>
+<br><br>
+<!-- Get Started -->
+<div class="container box-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-4">Getting Started</h2>
+            <ol>
+                <li>Select a dataset from the homepage.</li>
+                <li>Follow the guided steps to train your machine learning model.</li>
+                <li>Make predictions and evaluate model performance.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock %}

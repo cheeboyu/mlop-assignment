@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/212fefc55b744918883a2732c1284da0/artifacts
+end_time: 1707385797220
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 212fefc55b744918883a2732c1284da0
+run_name: Light Gradient Boosting Machine
+run_uuid: 212fefc55b744918883a2732c1284da0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707385796886
+status: 3
+tags: []
+user_id: boyuc

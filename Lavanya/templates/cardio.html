@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+{% block title %}Cardiovascular Prediction{% endblock %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cardiostyle.css') }}">
+    <!-- Include JavaScript file here -->
+    <script src="{{ url_for('static', filename='cardio.js') }}"></script>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="cardio-title">Cardiovascular Disease Prediction</h1>
+        <p class="cardio-intro">This page aims to predict the likelihood of cardiovascular disease among dementia patients. It's important to note that this prediction is not definitive, and individuals should seek confirmation from a medical professional.</p>
+        <p class="cardio-intro">Cardiovascular disease refers to conditions that affect the heart and blood vessels, including heart diseases and hypertension. Given the increased risk of cardiovascular issues among dementia patients, early detection and management is crucial.</p>
+    </div>
+</div>
+
+
+<!-- Equipment Needed -->
+<div class="container equipment-container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h2>Devices Needed</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-rounded">
+                    <thead>
+                        <tr>
+                            <th class="col-sm-6">Measurement</th>
+                            <th class="col-sm-6">Device</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="Measurement">Diastolic Blood Pressure (Ap_lo) and Systolic Blood Pressure (Ap_hi)</td>
+                            <td onclick="toggleImage(this)">
+                                <div class="image-container">
+                                    <div class="image-text">Blood Pressure Monitor</div>
+                                    <img src="{{ url_for('static', filename='cardioimages/bpmonitor.png') }}" alt="Blood Pressure Monitor">
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="Measurement">Cholesterol</td>
+                            <td onclick="toggleImage(this)">
+                                <div class="image-container">
+                                    <div class="image-text">Home cholesterol testing kit</div>
+                                    <img src="{{ url_for('static', filename='cardioimages/cholesteroltest.jpg') }}" alt="Home cholesterol testing kit">
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="Measurement">Glucose</td>
+                            <td onclick="toggleImage(this)">
+                                <div class="image-container">
+                                    <div class="image-text">Blood glucose meter</div>
+                                    <img src="{{ url_for('static', filename='cardioimages/glucosemeter.png') }}" alt="Blood glucose meter">
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="Measurement">Heart rate</td>
+                            <td onclick="toggleImage(this)">
+                                <div class="image-container">
+                                    <div class="image-text">Pulse oximeter, fitness tracker, smartwatch</div>
+                                    <img src="{{ url_for('static', filename='cardioimages/heartrate.png') }}" alt="Pulse oximeter, fitness tracker, smartwatch">
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="Measurement">Blood oxygen level</td>
+                            <td onclick="toggleImage(this)">
+                                <div class="image-container">
+                                    <div class="image-text">Pulse oximeter</div>
+                                    <img src="{{ url_for('static', filename='cardioimages/pulseoximeter.png') }}" alt="Pulse oximeter">
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="Measurement">Body temperature</td>
+                            <td onclick="toggleImage(this)">
+                                <div class="image-container">
+                                    <div class="image-text">Thermometer</div>
+                                    <img src="{{ url_for('static', filename='cardioimages/thermometer.jpg') }}" alt="Thermometer">
+                                </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+
+
+<!-- Form Instructions -->
+<div class="container instructions-container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h2>Form Guidelines</h2>
+            <p>
+                Please select an option from the dropdown box or enter the readings directly from your device.
+            </p>
+            <p>
+                For Cholesterol and Glucose, please select the corresponding number options (1, 2, or 3) based on the measurement ranges provided below:
+            </p>
+            <p class="bold-text">Cholesterol</p>
+            <ul>
+                <li>1 - Normal: Less than 200 mg/dL</li>
+                <li>2 - Above Normal: 200-239 mg/dL</li>
+                <li>3 - Well Above Normal: 240 mg/dL or above</li>
+            </ul>
+            <p class="bold-text">Glucose</p>
+            <ul>
+                <li>1 - Normal: Less than 140 mg/dL</li>
+                <li>2 - Above Normal: 140-199 mg/dL</li>
+                <li>3 - Well Above Normal: 200 mg/dL or above</li>
+            </ul>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+
+<!-- Form to enter new data for predictions  -->
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 form-container">
+        <form id="prediction-form" action="{{ url_for('cardio') }}" method="POST">
+            <!-- Wrap all input fields inside a container -->
+            <div class="input-container">
+                <div class="input-row">
+                    <label for="Age">Age</label><br>
+                    <input type="text" id="Age" name="Age" placeholder="Age" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Gender">Sex</label><br>
+                    <select id="Gender" name="Gender" required="required">
+                        <option value="">Select Gender</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <label for="Weight">Weight</label><br>
+                    <input type="text" id="Weight" name="Weight" placeholder="Weight (kg)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Height">Height</label><br>
+                    <input type="text" id="Height" name="Height" placeholder="Height (cm)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Ap_lo">Diastolic blood pressure</label><br>
+                    <input type="text" id="Ap_lo" name="Ap_lo" placeholder="Diastolic blood pressure(ap_lo)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Ap_hi">Systolic blood pressure</label><br>
+                    <input type="text" id="Ap_hi" name="Ap_hi" placeholder="Systolic blood pressure(ap_hi)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Cholesterol">Cholesterol</label><br>
+                    <select id="Cholesterol" name="Cholesterol" required="required">
+                        <option value="">Select Cholesterol Level</option>
+                        <option value="1">Normal: 1</option>
+                        <option value="2">Above Normal: 2</option>
+                        <option value="3">Well Above Normal: 3</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <label for="Glucose">Glucose</label><br>
+                    <select id="Glucose" name="Glucose" required="required">
+                        <option value="">Select Glucose Level</option>
+                        <option value="1">Normal: 1</option>
+                        <option value="2">Above Normal: 2</option>
+                        <option value="3">Well Above Normal: 3</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <label for="Smoke">Smoker</label><br>
+                    <select id="Smoke" name="Smoke" required="required">
+                        <option value="">Do you smoke?</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <label for="Active">Active</label><br>
+                    <select id="Active" name="Active" required="required">
+                        <option value="">Are you active?</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <label for="Heart_rate">Heart rate</label><br>
+                    <input type="text" id="Heart_rate" name="Heart_rate" placeholder="Heart rate (bpm)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Blood_oxygen_level">Blood oxygen level</label><br>
+                    <input type="text" id="Blood_oxygen_level" name="Blood_oxygen_level" placeholder="Blood oxygen level (Sp02)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Body_temp">Body temperature</label><br>
+                    <input type="text" id="Body_temp" name="Body_temp" placeholder="Body temperature (°C)" required="required" />
+                </div>
+                <div class="input-row">
+                    <label for="Diabetic">Diabetic</label><br>
+                    <select id="Diabetic" name="Diabetic" required="required">
+                        <option value="">Are you diabetic?</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        </form>
+        <div id="error-messages"></div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+{% if submitted %}
+    {% if prediction == 0 %}
+    <div class="row prediction-result low-risk">
+        <div class="col-sm-12">
+            <h2>You are at low risk of Cardiovascular disease.</h2>
+            <p>You are currently showing no signs of Cardiovascular disease. However, it's important to maintain a healthy lifestyle and continue monitoring your health through regular check-ups.</p>
+        </div>
+    </div>
+    {% else %}
+        <div class="row prediction-result {% if prediction != 1 %}low-risk{% endif %}">
+            <div class="col-sm-12">
+                <h2>You have a high risk of Cardiovascular disease</h2>
+                <p>
+                    It's highly recommended to consult with a doctor for further evaluation and confirmation of your risk. Cardiovascular disease treatment costs can vary significantly depending on factors such as the severity of the condition and the type of medical facility. On average, treating a heart condition in a public subsidised ward costs around S$2,929. However, costs can escalate for treatments in unsubsidised wards or private hospitals.
+                </p>
+                <p>
+                    There are various ways to manage the cost of cardiovascular disease treatment. You can use Medisave, MediShield Life, or Integrated Shield Plans for financial assistance. MediFund is also available to provide additional support to patients in need.
+                </p>
+                <p class="more-info">
+                    For more information, you can visit these links:
+                    <div class="links">
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medisave" target="_blank" class="btn btn-primary">MediSave</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medishield-life" target="_blank" class="btn btn-primary">MediShield Life</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medishield-life/about-integrated-shield-plans" target="_blank" class="btn btn-primary">Integrated Shield Plans</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medifund" target="_blank" class="btn btn-primary">MediFund</a>
+                    </div>
+                </p>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
+
+{% endblock %}
+
+</body>
+</html>

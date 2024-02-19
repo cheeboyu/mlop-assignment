@@ -1,0 +1,1 @@
+[('Gradient Boosting Regressor', GradientBoostingRegressor(random_state=123)), ('CatBoost Regressor', <catboost.core.CatBoostRegressor object at 0x0000018EF06D1120>), ('Light Gradient Boosting Machine', LGBMRegressor(n_jobs=-1, random_state=123))]

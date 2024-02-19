@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/31dc0058b72e4a3a928a80455bce1059/artifacts
+end_time: 1707384608384
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 31dc0058b72e4a3a928a80455bce1059
+run_name: Dummy Regressor
+run_uuid: 31dc0058b72e4a3a928a80455bce1059
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707384608018
+status: 3
+tags: []
+user_id: boyuc

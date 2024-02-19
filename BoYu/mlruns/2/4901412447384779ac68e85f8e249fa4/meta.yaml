@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/4901412447384779ac68e85f8e249fa4/artifacts
+end_time: 1707319378398
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 4901412447384779ac68e85f8e249fa4
+run_name: AdaBoost Regressor
+run_uuid: 4901412447384779ac68e85f8e249fa4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707319378021
+status: 3
+tags: []
+user_id: boyuc

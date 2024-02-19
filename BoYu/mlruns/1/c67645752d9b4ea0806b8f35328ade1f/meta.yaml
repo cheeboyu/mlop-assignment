@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/c67645752d9b4ea0806b8f35328ade1f/artifacts
+end_time: 1707031585707
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: c67645752d9b4ea0806b8f35328ade1f
+run_name: rogue-loon-912
+run_uuid: c67645752d9b4ea0806b8f35328ade1f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707031581199
+status: 3
+tags: []
+user_id: boyuc

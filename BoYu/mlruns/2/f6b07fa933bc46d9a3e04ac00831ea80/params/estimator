@@ -1,0 +1,4 @@
+DecisionTreeRegressor(max_depth=7, max_features=0.7834770666900308,
+                      min_impurity_decrease=3.9192647531040874e-07,
+                      min_samples_leaf=6, min_samples_split=10,
+                      random_state=120)

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/4a2bcec18c4d4c6198cac3dfed3f4278/artifacts
+end_time: 1707376302881
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 4a2bcec18c4d4c6198cac3dfed3f4278
+run_name: Least Angle Regression
+run_uuid: 4a2bcec18c4d4c6198cac3dfed3f4278
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707376302506
+status: 3
+tags: []
+user_id: boyuc

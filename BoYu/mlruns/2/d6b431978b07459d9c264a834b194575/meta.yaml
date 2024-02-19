@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/d6b431978b07459d9c264a834b194575/artifacts
+end_time: 1707318593838
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: d6b431978b07459d9c264a834b194575
+run_name: Bagging Regressor
+run_uuid: d6b431978b07459d9c264a834b194575
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707318592751
+status: 3
+tags: []
+user_id: boyuc

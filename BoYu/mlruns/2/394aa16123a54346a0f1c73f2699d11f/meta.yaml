@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/394aa16123a54346a0f1c73f2699d11f/artifacts
+end_time: 1707370351667
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 394aa16123a54346a0f1c73f2699d11f
+run_name: Gradient Boosting Regressor
+run_uuid: 394aa16123a54346a0f1c73f2699d11f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707370351326
+status: 3
+tags: []
+user_id: boyuc

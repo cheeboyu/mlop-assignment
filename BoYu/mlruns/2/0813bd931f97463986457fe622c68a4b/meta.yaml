@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/0813bd931f97463986457fe622c68a4b/artifacts
+end_time: 1707370716249
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 0813bd931f97463986457fe622c68a4b
+run_name: Voting Regressor
+run_uuid: 0813bd931f97463986457fe622c68a4b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707370715402
+status: 3
+tags: []
+user_id: boyuc

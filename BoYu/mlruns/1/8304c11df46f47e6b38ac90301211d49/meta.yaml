@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/8304c11df46f47e6b38ac90301211d49/artifacts
+end_time: 1707031586925
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 8304c11df46f47e6b38ac90301211d49
+run_name: polite-hog-168
+run_uuid: 8304c11df46f47e6b38ac90301211d49
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707031586315
+status: 4
+tags: []
+user_id: boyuc

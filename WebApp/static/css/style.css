@@ -1,0 +1,152 @@
+body {
+    background-color: #e6e5e5; 
+    /* text-align: center;   */
+    }
+  
+.section-break {
+  background-color: bisque;
+}
+
+
+
+/* NAV BAR CSS */
+.nav-row{
+    background-color: #333;
+}
+
+.nav-ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10%;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-li{
+    float:left;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+display:none;
+position:fixed;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 2;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.nav-a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-a:hover{
+    background-color: #111;
+    text-decoration: none;
+    color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+/* END OF NAV BAR CSS */
+
+
+
+
+
+/* SLIDESHOW CSS */
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide {
+    float: left;
+    height: 510px;
+    width: 25%;
+}
+
+/* Add animation to the slides */
+.slide-wrapper {
+   
+    /* Calculate the total width on the
+      basis of number of slides */
+      width: calc(100% * 4);
+     
+    /* Specify the animation with the
+      duration and speed */
+      animation: slide 15s ease infinite;
+    }
+     
+    /* Set the background color
+    of each of the slides */
+    .slide:nth-child(1) {
+      background: green;
+    }
+     
+    .slide:nth-child(2) {
+      background: pink;
+    }
+     
+    .slide:nth-child(3) {
+      background: red;
+    }
+     
+    .slide:nth-child(4) {
+      background: yellow;
+}
+
+/* Define the animation 
+for the slideshow */
+@keyframes slide {
+   
+    /* Calculate the margin-left for 
+      each of the slides */
+      20% {
+        margin-left: 0px;
+      }
+     
+      40% {
+        margin-left: calc(-100% * 1);
+      }
+     
+      60% {
+        margin-left: calc(-100% * 2);
+      }
+     
+      80% {
+        margin-left: calc(-100% * 3);
+      }
+}
+/* END OF SLIDESHOW CSS */
+
+/* FOOTER */

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/ef214c45285844969818580e2eee8b8c/artifacts
+end_time: 1707372509169
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: ef214c45285844969818580e2eee8b8c
+run_name: Linear Regression
+run_uuid: ef214c45285844969818580e2eee8b8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707372508675
+status: 3
+tags: []
+user_id: boyuc

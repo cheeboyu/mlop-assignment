@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/bc32bc4233bf4511b293cceb27a07545/artifacts
+end_time: 1707372378303
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: bc32bc4233bf4511b293cceb27a07545
+run_name: Session Initialized fbcd
+run_uuid: bc32bc4233bf4511b293cceb27a07545
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707371758950
+status: 3
+tags: []
+user_id: boyuc

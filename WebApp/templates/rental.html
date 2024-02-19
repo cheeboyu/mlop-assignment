@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block title %}Rental Price{% endblock %}
+{% block content%}
+
+{% if submitted %}
+    {% if prediction == 0 %}
+    <br><br>
+    <div class="row prediction-result low-risk">
+        <div class="col-sm-12">
+            <br>
+            <h2>You have a low risk of contracting Diabetes.</h2>
+            <p>You are currently NOT SHOWING any signs of being Diabetic. 
+                However, it's important to maintain a healthy lifestyle and continue monitoring your health through regular check-ups.
+            </p>
+            <p class="more-info">
+                Here are some preventive measures to stay away from diabetes.               
+                 <div class="links">
+                    <a href="https://www.healthhub.sg/programmes/diabetes-mellitus" target="_blank" class="btn btn-primary">Let's BEAT Diabetes</a>
+                    <a href="https://www.rafflesmedicalgroup.com/health-resources/health-articles/war-with-diabetes-measures-you-can-take-to-stay-clear-of-diabetes/" target="_blank" class="btn btn-primary">Preventive Measures</a>
+                </div>
+            </p>
+        </div>
+    </div>
+    <br>
+    {% else %}
+    <br><br>
+        <div class="row prediction-result {% if prediction != 1 %}low-risk{% endif %}">
+            <div class="col-sm-12">
+                <br>
+                <h2><strong>You have a risk of contracting Diabetes</strong></h2>
+                <p>
+                    It's <strong>HIGHLY RECOMMENDED</strong> to consult with a doctor for further evaluation and confirmation of your risk.
+                </p>
+                <p>
+                    Diabetes treatment costs can vary significantly depending on factors such as the severity of the condition and the type of medical facility. 
+                    The estimated medical cost for treating diabetes in Singapore is $2,034. 
+                </p>
+                <p>
+                    If you need any financial assistance for treatment of diabetes, there are various ways to manage the cost. 
+                    You can use Medisave, MediShield Life, or Integrated Shield Plans for financial assistance. 
+                    MediFund is also available to provide additional support to patients in need.
+                </p>
+                <p class="more-info">
+                    For more information, you can visit these links:
+                    <div class="links">
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medisave" target="_blank" class="btn btn-primary">MediSave</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medishield-life" target="_blank" class="btn btn-primary">MediShield Life</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medishield-life/about-integrated-shield-plans" target="_blank" class="btn btn-primary">Integrated Shield Plans</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medifund" target="_blank" class="btn btn-primary">MediFund</a>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <br>
+    {% endif %}
+{% endif %}
+
+
+<br><br><br>
+<div class="container box-container">
+    <div class="row">
+        <span class="col-sm-12">
+            <h1>Rental Price Prediction</h1>
+            <p>This prediction aims to predict the rental prices of budget accommodation provided by Homely Hotels and Homes. 
+                It utilizes machine learning algorithms trained on relevant features from the dataset to estimate the rental prices accurately.
+            </p>
+            <p>Predicting rental prices is essential for both landlords and tenants. 
+                Landlords can set competitive rental rates based on market trends and property features, while tenants can make informed decisions 
+                when searching for accommodation within their budget. 
+            </p>
+            <p>It's important to note that the predictions provided by this model are based on historical data and patterns observed in the dataset.
+                Actual rental prices may vary due to factors such as location, demand, and property condition</p>
+        </span>
+    </div>
+</div>
+<br>
+
+<!-- Form to enter new data for predictions  -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 box-container">
+            <h2>Please fill in the fields below:</h2>
+            <form action="{{ url_for('diabetes')}}"method="POST">
+            <!-- Wrap all input fields inside a container -->
+            <div class="input-container">
+                <div class="input-row">
+                    <label for="Age">Age (1 - 150):</label><br>
+                    <input type="text" id="Age" name='Age' placeholder="Age" required="required"><br>
+                </div>
+    
+                <div class="input-row">
+                    <label for="BMI">BMI (1kg/m² - 200kg/m²):</label><br>
+                    <input type="text" id="BMI" name="bmi" placeholder="BMI (kg/m²)" required="required"><br>
+                </div>
+    
+                <div class="input-row">
+                    <label for="Glucose">Glucose level (1mg/dL - 300mg/dL):</label><br>
+                    <input type="text" id="Glucose" name='Glucose', placeholder="Glucose (mg/dL)" required="required"><br>
+                </div>
+    
+                <div class="input-row">
+                    <label for="BloodPressure">Resting Blood Pressure (1 - 200):</label><br>
+                    <input type="text" id="BloodPressure" name='BloodPressure' placeholder="Blood Pressure" required="required"><br>
+                </div>
+    
+                <div class="input-row">
+                    <label for="Insulin">Insulin Level (1mlU/L - 400mlU/L):</label><br>
+                    <input type="text" id="Insulin" name='Insulin' placeholder="Insulin Level (mlU/L)" required="required"><br>
+                </div>
+    
+                <div class="input-row">
+                    <label for="BloodOxygenLevel">Blood Oxygen Level (1 - 100):</label><br>
+                    <input type="text" id="BloodOxygenLevel" name='BloodOxygenLevel' placeholder="Blood Oxygen Level (SpO2)" required="required"><br>
+                </div>
+                <div class="input-row">
+                    <label for="BodyTemperature">Body Temperature (1°C - 45°C):</label><br>
+                    <input type="text" id="BodyTemperature" name='BodyTemperature' placeholder="Body Temperature (°C)" required="required"><br>
+                </div>
+            </div>
+            <br>
+            <button><a href="/rental">Reset</a></button>
+            <br><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            <div id="error-messages"></div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+<br><br>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/3bdc510479884edeb680422da665234d/artifacts
+end_time: 1706977012620
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 3bdc510479884edeb680422da665234d
+run_name: luminous-yak-321
+run_uuid: 3bdc510479884edeb680422da665234d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706977006943
+status: 3
+tags: []
+user_id: boyuc

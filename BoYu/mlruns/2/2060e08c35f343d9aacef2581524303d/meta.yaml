@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/2060e08c35f343d9aacef2581524303d/artifacts
+end_time: 1707373139203
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 2060e08c35f343d9aacef2581524303d
+run_name: Lasso Regression
+run_uuid: 2060e08c35f343d9aacef2581524303d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707373138857
+status: 3
+tags: []
+user_id: boyuc

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/b562ecd96f6a42c5b344e7ead1a7ceec/artifacts
+end_time: 1707313945981
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: b562ecd96f6a42c5b344e7ead1a7ceec
+run_name: Decision Tree Regressor
+run_uuid: b562ecd96f6a42c5b344e7ead1a7ceec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707313945587
+status: 3
+tags: []
+user_id: boyuc

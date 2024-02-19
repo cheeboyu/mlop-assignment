@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/c625c94e64ce472e89828247b7c0cef3/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: c625c94e64ce472e89828247b7c0cef3
+run_name: stately-doe-707
+run_uuid: c625c94e64ce472e89828247b7c0cef3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707389763500
+status: 1
+tags: []
+user_id: boyuc

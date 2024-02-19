@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/dbd743f354914411b4ff30153e399ac5/artifacts
+end_time: 1707151608315
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: dbd743f354914411b4ff30153e399ac5
+run_name: Orthogonal Matching Pursuit
+run_uuid: dbd743f354914411b4ff30153e399ac5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707151607961
+status: 3
+tags: []
+user_id: boyuc

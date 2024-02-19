@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/0a61c7f5a0f94e7fb26350f667c7967b/artifacts
+end_time: 1707389550451
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 0a61c7f5a0f94e7fb26350f667c7967b
+run_name: exultant-perch-250
+run_uuid: 0a61c7f5a0f94e7fb26350f667c7967b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707389550401
+status: 4
+tags: []
+user_id: boyuc

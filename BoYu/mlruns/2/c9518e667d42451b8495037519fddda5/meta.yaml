@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/c9518e667d42451b8495037519fddda5/artifacts
+end_time: 1707388701956
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: c9518e667d42451b8495037519fddda5
+run_name: Huber Regressor
+run_uuid: c9518e667d42451b8495037519fddda5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707388701596
+status: 3
+tags: []
+user_id: boyuc

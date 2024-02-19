@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/b825533cdcd54068b9f5e9d7967e091b/artifacts
+end_time: 1707382868601
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: b825533cdcd54068b9f5e9d7967e091b
+run_name: Lasso Least Angle Regression
+run_uuid: b825533cdcd54068b9f5e9d7967e091b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707382868228
+status: 3
+tags: []
+user_id: boyuc

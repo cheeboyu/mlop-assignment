@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/bfa38b92a89d43eb925317f8e5aa3a60/artifacts
+end_time: 1707316684758
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: bfa38b92a89d43eb925317f8e5aa3a60
+run_name: Extra Trees Regressor
+run_uuid: bfa38b92a89d43eb925317f8e5aa3a60
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707316683945
+status: 3
+tags: []
+user_id: boyuc

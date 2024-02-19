@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/567030bf185742b5aa8ee1fcf32af41e/artifacts
+end_time: 1707376303617
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 567030bf185742b5aa8ee1fcf32af41e
+run_name: Elastic Net
+run_uuid: 567030bf185742b5aa8ee1fcf32af41e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707376303054
+status: 3
+tags: []
+user_id: boyuc

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/4aef1880beb4411f8120b23b6f7f5bc5/artifacts
+end_time: 1706976591463
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 4aef1880beb4411f8120b23b6f7f5bc5
+run_name: adaptable-ox-690
+run_uuid: 4aef1880beb4411f8120b23b6f7f5bc5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706976583067
+status: 3
+tags: []
+user_id: boyuc

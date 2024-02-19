@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/7af1dbc3cfeb41abae7967da043cc141/artifacts
+end_time: 1707376002625
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 7af1dbc3cfeb41abae7967da043cc141
+run_name: Stacking Regressor
+run_uuid: 7af1dbc3cfeb41abae7967da043cc141
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707376001917
+status: 3
+tags: []
+user_id: boyuc

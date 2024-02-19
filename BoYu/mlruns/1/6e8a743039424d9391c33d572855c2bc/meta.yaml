@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/6e8a743039424d9391c33d572855c2bc/artifacts
+end_time: 1706976297381
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 6e8a743039424d9391c33d572855c2bc
+run_name: agreeable-wasp-145
+run_uuid: 6e8a743039424d9391c33d572855c2bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706976287848
+status: 3
+tags: []
+user_id: boyuc

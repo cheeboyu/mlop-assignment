@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block title %}Mushroom Edibility{% endblock %}
+{% block content%}
+
+{% if submitted %}
+    {% if prediction == 0 %}
+    <br><br>
+    <div class="row prediction-result low-risk">
+        <div class="col-sm-12">
+            <br>
+            <h2>You are at low risk of Cardiovascular disease.</h2>
+            <p>You are currently showing no signs of Cardiovascular disease. However, it's important to maintain a healthy lifestyle and continue monitoring your health through regular check-ups.</p>
+        </div>
+    </div>
+    <br>
+    {% else %}
+    <br><br>
+        <div class="row prediction-result {% if prediction != 1 %}low-risk{% endif %}">
+            <div class="col-sm-12">
+                <br>
+                <h2><strong>You have a high risk of Cardiovascular disease</strong></h2>
+                <p>
+                    It's <strong>HIGHLY RECOMMENDED</strong> to consult with a doctor for further evaluation and confirmation of your risk. Cardiovascular disease treatment costs can vary significantly depending on factors such as the severity of the condition and the type of medical facility. On average, treating a heart condition in a public subsidised ward costs around S$2,929. However, costs can escalate for treatments in unsubsidised wards or private hospitals.
+                </p>
+                <p>
+                    There are various ways to manage the cost of cardiovascular disease treatment. You can use Medisave, MediShield Life, or Integrated Shield Plans for financial assistance. MediFund is also available to provide additional support to patients in need.
+                </p>
+                <p class="more-info">
+                    For more information, you can visit these links:
+                    <div class="links">
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medisave" target="_blank" class="btn btn-primary">MediSave</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medishield-life" target="_blank" class="btn btn-primary">MediShield Life</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medishield-life/about-integrated-shield-plans" target="_blank" class="btn btn-primary">Integrated Shield Plans</a>
+                        <a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/medifund" target="_blank" class="btn btn-primary">MediFund</a>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <br>
+    {% endif %}
+{% endif %}
+
+<br><br><br>
+<div class="container box-container">
+    <div class="row">
+            <span class="col-sm-12">
+                <h1>Mushroom Edibility Classification</h1>
+                <p>This classification focus on classifying the edibility of various mushroom species based on their attributes. It's essential to note that while
+                     this classification provides insights into the potential edibility of mushrooms, individuals should exercise caution when consuming 
+                     wild mushrooms and consult with a mycologist or expert for accurate identification.</p>
+                <p>The classification task involves determining whether a mushroom species is edible, poisonous, or of unknown edibility and not recommended 
+                    for consumption. By analyzing attributes such as cap shape, odor, and habitat, the model aims to assist mushroom enthusiasts and 
+                    foragers in making informed decisions about which mushrooms are safe to consume.</p>
+            </span>
+    </div>
+</div>
+
+<br>
+<!-- Form to enter new data for predictions  -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 box-container">
+            <h2>Please fill in the fields below:</h2>
+            <form id="prediction-form" action="{{ url_for('cardio') }}" method="POST">
+                <!-- Wrap all input fields inside a container -->
+                <div class="input-container">
+                    <div class="input-row">
+                        <label for="Age">Age</label><br>
+                        <input type="text" id="Age" name="Age" placeholder="Age" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Gender">Sex</label><br>
+                        <select id="Gender" name="Gender" required="required">
+                            <option value="">Select Gender</option>
+                            <option value="F">Female</option>
+                            <option value="M">Male</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="Weight">Weight</label><br>
+                        <input type="text" id="Weight" name="Weight" placeholder="Weight (kg)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Height">Height</label><br>
+                        <input type="text" id="Height" name="Height" placeholder="Height (cm)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Ap_lo">Diastolic blood pressure</label><br>
+                        <input type="text" id="Ap_lo" name="Ap_lo" placeholder="Diastolic blood pressure(ap_lo)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Ap_hi">Systolic blood pressure</label><br>
+                        <input type="text" id="Ap_hi" name="Ap_hi" placeholder="Systolic blood pressure(ap_hi)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Cholesterol">Cholesterol</label><br>
+                        <select id="Cholesterol" name="Cholesterol" required="required">
+                            <option value="">Select Cholesterol Level</option>
+                            <option value="1">Normal: 1</option>
+                            <option value="2">Above Normal: 2</option>
+                            <option value="3">Well Above Normal: 3</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="Glucose">Glucose</label><br>
+                        <select id="Glucose" name="Glucose" required="required">
+                            <option value="">Select Glucose Level</option>
+                            <option value="1">Normal: 1</option>
+                            <option value="2">Above Normal: 2</option>
+                            <option value="3">Well Above Normal: 3</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="Smoke">Smoker</label><br>
+                        <select id="Smoke" name="Smoke" required="required">
+                            <option value="">Do you smoke?</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="Active">Active</label><br>
+                        <select id="Active" name="Active" required="required">
+                            <option value="">Are you active?</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="input-row">
+                        <label for="Heart_rate">Heart rate</label><br>
+                        <input type="text" id="Heart_rate" name="Heart_rate" placeholder="Heart rate (bpm)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Blood_oxygen_level">Blood oxygen level</label><br>
+                        <input type="text" id="Blood_oxygen_level" name="Blood_oxygen_level" placeholder="Blood oxygen level (Sp02)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Body_temp">Body temperature</label><br>
+                        <input type="text" id="Body_temp" name="Body_temp" placeholder="Body temperature (°C)" required="required" />
+                    </div>
+                    <div class="input-row">
+                        <label for="Diabetic">Diabetic</label><br>
+                        <select id="Diabetic" name="Diabetic" required="required">
+                            <option value="">Are you diabetic?</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </div>
+                <button><a href="/mushroom">Reset</a></button>
+                <br><br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+            </form>
+            <div id="error-messages"></div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+
+<br><br><br>
+
+
+{% endblock %}

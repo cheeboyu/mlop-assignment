@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/5b4d6273c09e470392e072f9766576e3/artifacts
+end_time: 1707320476220
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: 5b4d6273c09e470392e072f9766576e3
+run_name: Bayesian Ridge
+run_uuid: 5b4d6273c09e470392e072f9766576e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707320475836
+status: 3
+tags: []
+user_id: boyuc

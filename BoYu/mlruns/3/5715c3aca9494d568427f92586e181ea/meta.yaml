@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/3/5715c3aca9494d568427f92586e181ea/artifacts
+end_time: 1707389488464
+entry_point_name: ''
+experiment_id: '3'
+lifecycle_stage: active
+run_id: 5715c3aca9494d568427f92586e181ea
+run_name: rare-loon-148
+run_uuid: 5715c3aca9494d568427f92586e181ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707389488386
+status: 4
+tags: []
+user_id: boyuc

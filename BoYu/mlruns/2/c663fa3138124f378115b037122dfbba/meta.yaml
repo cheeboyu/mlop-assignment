@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/c663fa3138124f378115b037122dfbba/artifacts
+end_time: 1707372793452
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: c663fa3138124f378115b037122dfbba
+run_name: Passive Aggressive Regressor
+run_uuid: c663fa3138124f378115b037122dfbba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707372793042
+status: 3
+tags: []
+user_id: boyuc

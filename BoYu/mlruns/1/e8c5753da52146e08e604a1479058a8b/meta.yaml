@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/1/e8c5753da52146e08e604a1479058a8b/artifacts
+end_time: 1707031225113
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: e8c5753da52146e08e604a1479058a8b
+run_name: unique-ant-519
+run_uuid: e8c5753da52146e08e604a1479058a8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707031213474
+status: 3
+tags: []
+user_id: boyuc

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/boyuc/Downloads/IT3385/Assignment/mlruns/2/fa3c89f1bfd048049fe16f0dceae5174/artifacts
+end_time: 1707373282349
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+run_id: fa3c89f1bfd048049fe16f0dceae5174
+run_name: K Neighbors Regressor
+run_uuid: fa3c89f1bfd048049fe16f0dceae5174
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707373281983
+status: 3
+tags: []
+user_id: boyuc
