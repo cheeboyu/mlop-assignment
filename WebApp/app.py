@@ -1,78 +1,73 @@
+# Importing necessary libraries
 from flask import Flask, request, render_template
 from pycaret.regression import *
 import pandas as pd
 from joblib import load
 
+# Creating a Flask web application instance
 app = Flask(__name__)
 
-diabetes_clf = load("HuiXin\diabetes_rf.pkl")
-diabetes_cols = ['BloodPressure', 'BloodOxygenLevel', 'BodyTemperature', 'Glucose', 'Insulin', 'BMI', 'Age']
+# Load the trained machine learning model
+rental_model = load("BoYu/boyu_model.pkl")
 
-cardio_clf = load("Lavanya\knn_model.pkl")
-cardio_cols = ['Age', 'Gender', 'Weight', 'Height', 'Ap_hi', 'Ap_lo', 'Cholesterol',
-       'Glucose', 'Smoke', 'Active', 'Heart_rate', 'Blood_oxygen_level',
-       'Body_temp', 'Diabetic']
+# Define the columns for input features
+rental_cols = ['bathrooms', 'bedrooms', 'accommodates', 'beds', 'review_scores_rating']
 
+# Define route for the home page
 @app.route("/")
 def home():
     return render_template("home.html")
 
-
-@app.route('/mushroom', methods=['GET', 'POST'])
-def cardio():
-    if request.method == "POST":
-        int_features = [x for x in request.form.values()]
-        age = request.form.get('Age', '')
-        gender = request.form.get('Gender', '')
-        weight = request.form.get('Weight', '')
-        height = request.form.get('Height', '')
-        ap_lo = request.form.get('Ap_lo', '')
-        ap_hi = request.form.get('Ap_hi', '')
-        cholesterol = request.form.get('Cholesterol', '')
-        glucose = request.form.get('Glucose', '')
-        smoke = request.form.get('Smoke', '')
-        active = request.form.get('Active', '')
-        heart_rate = request.form.get('Heart_rate', '')
-        blood_oxygen_level = request.form.get('Blood_oxygen_level', '')
-        body_temp = request.form.get('Body_temp', '')
-        diabetic = request.form.get('Diabetic', '')
-        # Map gender input to integer
-        int_features[1] = map_gender(int_features[1])
-        data_unseen = pd.DataFrame([int_features], columns=cardio_cols)
-        prediction = cardio_clf.predict(data_unseen)
-        return render_template("mushroom.html", prediction=prediction, submitted=True)
-    else:
-        return render_template("mushroom.html", submitted=False)
-# Cardio gender mapping
-def map_gender(gender_input):
-    if gender_input.upper() == 'F':
-        return 1
-    elif gender_input.upper() == 'M':
-        return 2
-    else:
-        # Handle invalid input
-        return None
-
+# Define route for the rental prediction page
 @app.route('/rental', methods=['GET', 'POST'])
-def diabetes():
+def predict_rental():
     if request.method == "POST":
-        int_features = [x for x in request.form.values()]
-        # print(int_features)
-        BloodPressure = request.form.get('BloodPressure', '')
-        BloodOxygenLevel = request.form.get('BloodOxygen', '')
-        BodyTemperature = request.form.get('BodyTemp', '')
-        Glucose = request.form.get('Glucose', '')
-        Insulin = request.form.get('Insulin', '')
-        BMI = request.form.get('BMI', '')
-        Age = request.form.get('Age', '')
-            
-        data_unseen = pd.DataFrame([int_features], columns=diabetes_cols)
-        # print(data_unseen)
-        prediction = diabetes_clf.predict(data_unseen)
-        return render_template("rental.html", prediction=prediction, submitted=True)
+        # Get input values from the form
+        bathrooms = request.form.get('bathrooms', '')
+        bedrooms = request.form.get('bedrooms', '')
+        accommodates = request.form.get('accommodates', '')
+        beds = request.form.get('beds', '')
+        review_scores_rating = request.form.get('review_scores_rating', '')
+
+        # Validate input fields
+        if not (bathrooms and bedrooms and accommodates and beds and review_scores_rating):
+            return render_template("rental.html", error_message="Please fill in all the fields.")
+
+        try:
+            # Convert input values to float
+            bathrooms = float(bathrooms)
+            bedrooms = float(bedrooms)
+            accommodates = float(accommodates)
+            beds = float(beds)
+            review_scores_rating = float(review_scores_rating)
+        except ValueError:
+            return render_template("rental.html", error_message="Invalid input. Please enter numerical values.")
+
+        # Create DataFrame with input values
+        data_unseen = pd.DataFrame(
+            [[bathrooms, bedrooms, accommodates, beds, review_scores_rating]],
+            columns=rental_cols)
+
+        # Add default values for missing columns
+        missing_columns = ['guests_included', 'host_listings_count', 'bed_type', 'cancellation_policy',
+                           'has_availability', 'host_is_superhost', 'instant_bookable',
+                           'property_type', 'room_type']
+        for col in missing_columns:
+            # Assigning default value of 1 for missing columns
+            data_unseen[col] = 1
+
+        # Perform prediction
+        prediction = rental_model.predict(data_unseen)
+
+        # Round the prediction to 2 decimal places
+        prediction_rounded = round(prediction[0], 2)
+
+        # Render template with prediction result
+        return render_template("rental.html", prediction=prediction_rounded, submitted=True)
 
     else:
         return render_template("rental.html", submitted=False)
 
+# Run the Flask web application
 if __name__ == "__main__":
     app.run(debug=True)

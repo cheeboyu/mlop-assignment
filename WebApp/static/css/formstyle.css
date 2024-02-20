@@ -46,96 +46,11 @@ background-color: peachpuff;
     font-weight: normal;
 }
 
-
-
-
-
-
-
-
-.btn.btn-primary.btn-block.btn-large {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
 .form-container {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
 }
-
-.prediction-result {
-    background-color: #f8d7da; /* Default background color for high risk */
-    border: 1px solid #f5c6cb; /* Default border color for high risk */
-    border-radius: 5px;
-    margin-top: 40px;
-    margin-bottom: 20px; /* Add space at the bottom */
-    max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add spacing on both sides */
-}
-
-.prediction-result.low-risk {
-    background-color: #d7f8da; /* Background color for low risk */
-    border: 1px solid #c6f5cb; /* Border color for low risk */
-    max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add spacing on both sides */
-}
-
-.prediction-result h2 {
-    font-size: 24px;
-    color: #721c24; /* Default text color */
-}
-
-.prediction-result.low-risk h2 {
-    color: #1c7224; /* Text color for low risk */
-}
-
-.prediction-result p {
-    font-size: 16px;
-    color: #721c24; /* Default text color */
-    margin-bottom: 10px;
-}
-
-.prediction-result.low-risk p {
-    color: #1c7224; /* Text color for low risk */
-}
-
-.more-info {
-    font-size: 16px;
-    color: #721c24; /* Default text color */
-}
-
-.more-info.low-risk {
-    color: #1c7224; /* Text color for low risk */
-}
-
-.links {
-    margin-top: 10px;
-}
-
-.links a {
-    margin-right: 10px;
-    font-size: 16px; /* Match button text size with other text */
-    background-color: #e9ecef; /* Neutral background color */
-    color: #495057; /* Neutral text color */
-    border-color: #ced4da; /* Neutral border color */
-}
-
-.links a:hover {
-    background-color: #adb5bd; /* Darker background color on hover */
-    border-color: #adb5bd; /* Darker border color on hover */
-    color: #fff; /* White text color on hover */
-}
-
 
 /* Equipment styling */
 
@@ -294,11 +209,6 @@ background-color: peachpuff;
 
 
 
-
-
-
-
-
 .btn.btn-primary.btn-block.btn-large {
     width: 100%;
     padding: 10px;
@@ -318,65 +228,27 @@ background-color: peachpuff;
 }
 
 .prediction-result {
-    background-color: #f8d7da; /* Default background color for high risk */
-    border: 1px solid #f5c6cb; /* Default border color for high risk */
+    background-color: #505050; /* Default background color for high risk */
+    border: 1px solid #505050; /* Default border color for high risk */
     border-radius: 5px;
-    padding: 15px;
-    margin-top: 20px;
+    margin-top: 40px;
+    text-align: center;
     margin-bottom: 20px; /* Add space at the bottom */
-}
-
-.prediction-result.low-risk {
-    background-color: #d7f8da; /* Background color for low risk */
-    border: 1px solid #c6f5cb; /* Border color for low risk */
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add spacing on both sides */
 }
 
 .prediction-result h2 {
     font-size: 24px;
-    color: #721c24; /* Default text color */
-}
-
-.prediction-result.low-risk h2 {
-    color: #1c7224; /* Text color for low risk */
+    color: #ffff; /* Default text color */
 }
 
 .prediction-result p {
     font-size: 16px;
-    color: #721c24; /* Default text color */
+    color: #ffff; /* Default text color */
     margin-bottom: 10px;
 }
-
-.prediction-result.low-risk p {
-    color: #1c7224; /* Text color for low risk */
-}
-
-.more-info {
-    font-size: 16px;
-    color: #721c24; /* Default text color */
-}
-
-.more-info.low-risk {
-    color: #1c7224; /* Text color for low risk */
-}
-
-.links {
-    margin-top: 10px;
-}
-
-.links a {
-    margin-right: 10px;
-    font-size: 16px; /* Match button text size with other text */
-    background-color: #e9ecef; /* Neutral background color */
-    color: #495057; /* Neutral text color */
-    border-color: #ced4da; /* Neutral border color */
-}
-
-.links a:hover {
-    background-color: #adb5bd; /* Darker background color on hover */
-    border-color: #adb5bd; /* Darker border color on hover */
-    color: #fff; /* White text color on hover */
-}
-
 
 /* Equipment styling */
 
