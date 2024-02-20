@@ -29,3 +29,5 @@ In addition to these directories, there are several important files:
   <li><b>213422_Assignment.ipynb:</b> A Jupyter Notebook file, containing code, visualizations, and markdown text explaining an assignment or task within this project.</li>
   <li><b>app.py:</b> The main Python file running the Flask/Django application server for serving the web app.</li>
 </ul>
+
+<p>GitHub link: https://github.com/cheeboyu/mlop-assignment</p>
