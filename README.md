@@ -13,17 +13,25 @@ The MLOP-ASSIGNMENT project follows a structured directory layout:
 
 - **notebooks/:** Contains Jupyter notebooks used for data exploration, analysis, and model training. For example, `214322H_Assignment.ipynb`.
 
-- **WebApp/:** Contains files for the web application component:
-  - `static/`: Holds static files like CSS, images, and JavaScript.
-    - `css/`: Contains CSS stylesheets.
-    - `images/`: Contains images used in the web app.
-  - `templates/`: Contains HTML template files used by Flask to generate web pages.
-
+- **WebApp/:** Holds files for the web application component:
+  - **static/:** Stores static files like CSS, images, and JavaScript.
+  - **css/:** Includes CSS stylesheets such as formstyle.css, style.css, and svg.css.
+  - **images/:** Houses images like ‘mushroom1.jpg’, ‘mushroom2.jpg’, ‘rental_1.jpg’, and ‘rental_2.jpg’ used in the web app.
+  - **‘js/’:** Contains JavaScript file named ‘base.js’.
+  - **templates/:** Holds HTML template files like ‘base.html’, ‘home.html’, ‘mushroom.html’, and ‘rental.html’ used by Flask to generate web pages.
+  - **‘app.py’:** The main Python file running the Flask web application.
+  
 - **poetry/:** This folder cotains all the poetry requirements for dependency management.
 
-- **README.md:** This file provides an overview of the project.
+- **logs.log:** A log file capturing events or errors while running applications.
+  
+- **pyproject.toml:** A configuration file containing settings for building packages among other things.
+  
+- **README.md:** Provides an overview of the project including instructions or details about the project.
 
-- **requirements.txt:** Lists Python dependencies required for the project.
+- **rental_mushroom.py:** A Python script related to rental mushroom functionality in your application.
+  
+- **requirements.txt:** Lists Python dependencies required for executing or developing applications within this project environment.
 
 Please refer to the individual directories for more detailed information.
 
