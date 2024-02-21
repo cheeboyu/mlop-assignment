@@ -1,4 +1,6 @@
-flask==2.1.0
-pycaret==3.2.0
-numpy==1.23.1
-poetry==1.7.1
+Flask==2.1.0
+PyCaret==3.2.0
+NumPy==1.23.1
+Poetry==1.7.1
+Hydra-core==1.3.2
+DVC==3.42.0
