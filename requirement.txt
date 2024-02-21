@@ -1,5 +1,0 @@
-C:/Users/boyuc/AppData/Local/Programs/Python/Python312/python.exe -m pip install flask
-
-C:/Users/boyuc/AppData/Local/Programs/Python/Python312/python.exe -m pip install pycaret
-
-C:/Users/boyuc/AppData/Local/Programs/Python/Python312/python.exe -m pip install numpy

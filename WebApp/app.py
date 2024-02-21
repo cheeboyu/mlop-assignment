@@ -8,7 +8,7 @@ from joblib import load
 app = Flask(__name__)
 
 # Load the trained machine learning model
-rental_model = load("BoYu/boyu_model.pkl")
+rental_model = load("models/boyu_model.pkl")
 
 # Define the columns for input features
 rental_cols = ['bathrooms', 'bedrooms', 'accommodates', 'beds', 'review_scores_rating']

@@ -1,33 +1,28 @@
-<h2>Project Structure</h2>
-<p>
-The "BoYu" project is a Python-based project with the following directory structure:
-</p>
+# Project Structure
 
-<ul>
-  <li><b>.ipynb_checkpoints:</b> This folder contains saved states of Jupyter Notebooks.</li>
-  <li><b>mlruns:</b> This folder is related to MLflow, indicating that machine learning is involved in this project.</li>
-  <li><b>WebApp:</b> This folder contain a web application component in this project. It contains the following subdirectories:
-    <ul>
-      <li><b>static:</b> Contains static files like CSS and images required for the web app’s frontend.
-        <ul>
-          <li><b>css:</b> Stores CSS files for styling the web application.</li>
-          <li><b>images:</b> Contains image files like 'mushroom_1.jpg', 'mushroom_2.jpg', 'rental_1.jpg', and 'rental_2.jpg'.</li>
-        </ul>
-      </li>
-      <li><b>js:</b> Contain JavaScript files for client-side scripting.</li>
-      <li><b>templates:</b> Holds HTML templates like 'base.html', 'home.html', 'mushroom.html', and 'rental.html'.</li>
-    </ul>
-  </li>
-</ul>
+The MLOP-ASSIGNMENT project follows a structured directory layout:
 
-<p>
-In addition to these directories, there are several important files:
-</p>
+- **BoYu/:** This directory contains data and files related to the BoYu project component:
+  - `data/`: Contains the `01_homely_resort_listing.csv` file, which is part of the BoYu project.
+  
+- **data/:** This directory stores project data files.
 
-<ul>
-  <li><b>.gitattributes & .gitignore:</b> Configuration and ignore rules for Git version control system.</li>
-  <li><b>213422_Assignment.ipynb:</b> A Jupyter Notebook file, containing code, visualizations, and markdown text explaining an assignment or task within this project.</li>
-  <li><b>app.py:</b> The main Python file running the Flask/Django application server for serving the web app.</li>
-</ul>
+- **docs/:** Contains documentation files relevant to the project.
 
-<p>GitHub link: https://github.com/cheeboyu/mlop-assignment</p>
+- **models/:** Contains trained model files. For example, `boyu_model.pkl`.
+
+- **notebooks/:** Contains Jupyter notebooks used for data exploration, analysis, and model training. For example, `214322H_Assignment.ipynb`.
+
+- **WebApp/:** Contains files for the web application component:
+  - `static/`: Holds static files like CSS, images, and JavaScript.
+    - `css/`: Contains CSS stylesheets.
+    - `images/`: Contains images used in the web app.
+  - `templates/`: Contains HTML template files used by Flask to generate web pages.
+
+- **README.md:** This file provides an overview of the project.
+
+- **requirements.txt:** Lists Python dependencies required for the project.
+
+Please refer to the individual directories for more detailed information.
+
+GitHub link: [MLOP-ASSIGNMENT](https://github.com/cheeboyu/mlop-assignment)
