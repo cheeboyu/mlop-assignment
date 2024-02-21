@@ -19,6 +19,8 @@ The MLOP-ASSIGNMENT project follows a structured directory layout:
     - `images/`: Contains images used in the web app.
   - `templates/`: Contains HTML template files used by Flask to generate web pages.
 
+- **poetry/:** This folder cotains all the poetry requirements dependency management.
+
 - **README.md:** This file provides an overview of the project.
 
 - **requirements.txt:** Lists Python dependencies required for the project.
