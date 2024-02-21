@@ -46,7 +46,7 @@
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8 box-container">
-            <h2>Please fill in the fields below:</h2>
+            <h2>Accommodation Capacity Predictor:</h2>
             <form action="{{ url_for('predict_rental')}}" method="POST">
             <!-- Wrap all input fields inside a container -->
             <div class="input-container">
@@ -84,7 +84,7 @@
              <!-- Button to reset form -->
             <button><a href="/rental">Reset</a></button>
             <br><br>
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict Rental Price</button>
             </form>
             <!-- Display error messages -->
             <div id="error-messages">{{ error_message }}</div>
