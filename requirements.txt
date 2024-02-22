@@ -6,3 +6,4 @@ Hydra-core==1.3.2
 DVC==3.42.0
 streamlit==1.30.0
 gunicorn==19.9.0
+Werkzeug==2.1.2
