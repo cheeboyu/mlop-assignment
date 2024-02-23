@@ -14,7 +14,7 @@ The MLOP-ASSIGNMENT project follows a structured directory layout:
 
 - **models/:** Contains trained model files.
     - boyu_model.pkl: A trained model file for predicting rental price.
-    - final_mushroom_model.pkl: A trained model to identification and classification for mushrooms.
+    - final_mushroom_model2.pkl: A trained model to identification and classification for mushrooms.
 
 - **notebooks/:** Contains Jupyter notebooks used for data exploration, analysis, and model training. For example, `214322H_Assignment.ipynb`.
 
