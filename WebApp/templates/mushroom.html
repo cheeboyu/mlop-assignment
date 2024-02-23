@@ -3,28 +3,287 @@
 {% block content%}
 
 {% if submitted %}
+    {% if predictionlabel %}
+        <br><br><br>
+        <div class="row prediction-result" style="padding: 20px;">
+            <div class="row">
+                <span class="col-sm-12">
+                    <h1 style="color: #d9b99b;">Results</h1>
+                    <style>
+                        .green-text {
+                            color: lightgreen;
+                        }
+                        .red-text {
+                            color: lightcoral;
+                        }
+                    </style>
+                    {% if predictionlabel == 'edible' %}
+                        <p>
+
+                        </p>
+                        <h2>This mushroom is most likely <strong class="green-text">edible</strong></h2>
+                        <p>This mushroom is classified as <strong class="green-text">edible</strong>, which means it is safe for consumption.</p>
+                        <p>Beyond their culinary appeal, edible mushrooms are low in calories, high in essential nutrients like protein and fiber, 
+                            and some species even boast medicinal properties. While foraging for wild mushrooms can be an exhilarating experience, 
+                            it's crucial to exercise caution and proper identification to avoid toxic varieties. 
+                            Whether harvested in the wild or cultivated at home, edible mushrooms continue to be a beloved ingredient in gourmet cooking, 
+                            offering both flavor and nutrition to culinary enthusiasts.</p>
+                    {% elif predictionlabel == 'poisonous' %}
+                        <h2>This mushroom is most likely <strong class="red-text">poisonous</strong></h2>
+                        <p>This mushroom is classified as <strong class="red-text">poisonous</strong>, which means it is not safe for consumption. 
+                            Avoid consuming mushrooms classified as poisonous as they can cause harm or illness.</p>
+                        <p>
+                            Poisonous mushrooms pose severe health risks due to toxins causing anything from discomfort to death. 
+                            Identifying them can be tricky, as they may resemble edible varieties. 
+                            Characteristics like color, odor, and gill presence can help differentiate them. 
+                            Common toxic species include Death Caps and Destroying Angels, containing potent toxins like amatoxins leading to organ failure. 
+                            Caution is crucial when foraging, only consuming mushrooms of known edibility.</p>
+                        <p>In suspected mushroom poisoning cases, immediate action is vital. 
+                            Seek medical help promptly, providing detailed mushroom appearance and consumption time. 
+                            Avoid inducing vomiting, as it may not help and could worsen the situation. 
+                            If possible, collect a mushroom sample for identification. 
+                            Swift medical intervention and cautious steps can mitigate the 
+                            risks of poisonous mushroom ingestion, protecting individuals' health.  
+                        </p>
+                    {% else %}
+                        <h2>Unknown Classification</h2>
+                        <p>The classification for this mushroom is <strong>{{ predictionlabel }}</strong>, which means its edibility is unknown or not recommended for consumption. It's essential to exercise caution when consuming mushrooms with an unknown classification.</p>
+                    {% endif %}
+                    <p>To learn more about mushrooms, <a href="https://www.mushroomexpert.com/" target="_blank">click here</a>.</p>
+                </span>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
+
+<!-- Feature analysis -->
+<!-- Feature analysis -->
+{% if submitted %}
+    {% if odor or bruises %}
+        <div class="row prediction-result" style="margin-top: 40px; padding: 20px;">
+            <div class="row">
+                <span class="col-sm-12">
+                    <h2>Feature Analysis</h2>
+                    {% if odor %}
+                        <p>You have specified that the odor of this mushroom is <strong>{{ odor }}</strong>. Here is some information about this characteristic:</p>
+                        {% if odor in ['fishy', 'foul'] %}
+                            <p>Odors like <strong>fishy</strong> or <strong>foul</strong> are often associated with poisonous mushrooms. These odors can indicate the presence of toxins and are commonly found in mushrooms that are not safe for consumption. It's essential to avoid consuming mushrooms with such odors to prevent potential health risks.</p>
+                        {% else %}
+                            <p>The detected odor of this mushroom does not fall into the typical categories associated with poisonous mushrooms. However, it's essential to consider other attributes and exercise caution when determining the edibility of the mushroom.</p>
+                        {% endif %}
+                    {% endif %}
+                    {% if bruises %}
+                        {% if bruises == 'bruises' %}
+                            <p>Based on your responses, the mushroom has <strong>bruises</strong>. Here is some information about this characteristic:</p>
+                            <p>The presence of bruises on a mushroom is a common characteristic observed in many edible varieties. When a mushroom bruises upon handling or pressure, it often turns blue or blue-green in color. This reaction is indicative of certain chemical compounds present in edible mushrooms, such as psilocybin in some species of boletes.</p>
+                        {% elif bruises == 'no' %}
+                            <p>Based on your responses, the mushroom has <strong>no bruises</strong>. Here is some information about this characteristic:</p>
+                            <p>The absence of bruises on a mushroom may indicate certain characteristics:</p>
+                            <p>In some cases, edible mushrooms may not exhibit bruising, particularly if they belong to species that do not contain compounds that cause bruising.
+                            However, it's important to note that the lack of visible bruising does not necessarily mean the mushroom is unsafe to eat. Some poisonous mushrooms may also not bruise, and edibility should not be solely determined based on this characteristic.
+                            </p>
+                        {% else %}
+                            <p>The presence of bruises on this mushroom does not fall into the typical categories associated with edible or poisonous mushrooms. However, it's essential to consider other attributes and exercise caution when determining the edibility of the mushroom.</p>
+                        {% endif %}
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
+
+
 
 <br><br><br>
+<!-- Introduction to mushroom prediction -->
 <div class="container box-container">
     <div class="row">
-            <span class="col-sm-12">
-                <h1>Mushroom Edibility Classification</h1>
-                <p>This classification focus on classifying the edibility of various mushroom species based on their attributes. It's essential to note that while
-                     this classification provides insights into the potential edibility of mushrooms, individuals should exercise caution when consuming 
-                     wild mushrooms and consult with a mycologist or expert for accurate identification.</p>
-                <p>The classification task involves determining whether a mushroom species is edible, poisonous, or of unknown edibility and not recommended 
-                    for consumption. By analyzing attributes such as cap shape, odor, and habitat, the model aims to assist mushroom enthusiasts and 
-                    foragers in making informed decisions about which mushrooms are safe to consume.</p>
-            </span>
+        <span class="col-sm-12">
+            <h1>Mushroom Edibility Classification</h1>
+            <p>This classification focus on classifying the edibility of various mushroom species based on their attributes. It's essential to note that while
+                 this classification provides insights into the potential edibility of mushrooms, individuals should exercise caution when consuming 
+                 wild mushrooms and consult with a mycologist or expert for accurate identification.</p>
+            <p>The classification task involves determining whether a mushroom species is edible, poisonous, or of unknown edibility and not recommended 
+                for consumption. By analyzing attributes such as cap shape, odor, and habitat, the model aims to assist mushroom enthusiasts and 
+                foragers in making informed decisions about which mushrooms are safe to consume.</p>
+        </span>
     </div>
 </div>
-
 <br>
+
 <!-- Form to enter new data for predictions  -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 box-container">
+            <h2>Mushroom Characteristics Analysis:</h2>
+            <form action="{{ url_for('predict_mushroom')}}" method="POST">
+            <!-- Wrap all input fields inside a container -->
+            <div class="input-container">
+                <!-- Dropdown field for odor -->
+                <div class="input-row">
+                    <label for="odor">Odor:</label><br>
+                    <select id="odor" name="odor" required="required" style="width: 100%;">
+                        <option value="">What does the mushroom smell like?</option>
+                        <option value="almond">Almond</option>
+                        <option value="anise">Anise</option>
+                        <option value="creosote">Creosote</option>
+                        <option value="fishy">Fishy</option>
+                        <option value="foul">Foul</option>
+                        <option value="pungent">Pungent</option>
+                        <option value="spicy">Spicy</option>
+                        <option value="none">None</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>                
+                
+                
+                <!-- Dropdown field for ring type -->
+                <div class="input-row">
+                    <label for="ringtype">Ring Type:</label><br>
+                    <select id="ringtype" name="ringtype" required="required" style="width: 100%;">
+                        <option value="">What type of ring does the mushroom have?</option>
+                        <option value="evanescent">Evanescent</option>
+                        <option value="flaring">Flaring</option>
+                        <option value="large">Large</option>
+                        <option value="pendant">Pendant</option>
+                        <option value="none">None</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
+                
+                <!-- Dropdown field for gill size -->
+                <div class="input-row">
+                    <label for="gillsize">Gill Size:</label><br>
+                    <select id="gillsize" name="gillsize" required="required" style="width: 100%;">
+                        <option value="">How large are the mushroom's gills?</option>
+                        <option value="broad">Broad</option>
+                        <option value="narrow">Narrow</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
 
+                
+                <!-- Dropdown field for gill spacing -->
+                <div class="input-row">
+                    <label for="gillspacing">Gill Spacing:</label><br>
+                    <select id="gillspacing" name="gillspacing" required="required" style="width: 100%;">
+                        <option value="">How big is the spacing between the gills?</option>
+                        <option value="close">Close</option>
+                        <option value="crowded">Crowded</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
 
+                <!-- Dropdown field for gill color -->
+                <div class="input-row">
+                    <label for="gillcolor">Gill Color:</label><br>
+                    <select id="gillcolor" name="gillcolor" required="required" style="width: 100%;">
+                        <option value="">What color are the mushroom's gills?</option>
+                        <option value="black">Black</option>
+                        <option value="brown">Brown</option>
+                        <option value="buff">Buff (pale yellowish-brown)</option>
+                        <option value="chocolate">Chocolate (very dark brown)</option>
+                        <option value="gray">Gray</option>
+                        <option value="green">Green</option>
+                        <option value="orange">Orange</option>
+                        <option value="purple">Purple</option>
+                        <option value="white">White</option>
+                        <option value="yellow">Yellow</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
+                
+                <!-- Dropdown field for cap shape -->
+                <div class="input-row">
+                    <label for="capshape">Cap Shape:</label><br>
+                    <select id="capshape" name="capshape" required="required" style="width: 100%;">
+                        <option value="">What shape is the mushroom's cap?</option>
+                        <option value="bell">Bell</option>
+                        <option value="conical">Conical</option>
+                        <option value="convex">Convex</option>
+                        <option value="flat">Flat</option>
+                        <option value="knobbed">Knobbed</option>
+                        <option value="sunken">Sunken</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
+                
+                <!-- Dropdown field for cap color -->
+                <div class="input-row">
+                    <label for="capcolor">Cap Color:</label><br>
+                    <select id="capcolor" name="capcolor" required="required" style="width: 100%;">
+                        <option value="">What color is the cap?</option>
+                        <option value="brown">Brown</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="buff">Buff (pale yellowish-brown)</option>
+                        <option value="gray">Gray</option>
+                        <option value="green">Green</option>
+                        <option value="pink">Pink</option>
+                        <option value="purple">Purple</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                        <option value="cinnamon">Cinnamon</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
+                
+                <!-- Dropdown field for cap surface -->
+                <div class="input-row">
+                    <label for="capsurface">Cap Surface:</label><br>
+                    <select id="capsurface" name="capsurface" required="required" style="width: 100%;">
+                        <option value="">What kind of surface does the mushroom's cap have?</option>
+                        <option value="fibrous">Fibrous</option>
+                        <option value="grooves">Grooves</option>
+                        <option value="scaly">Scaly</option>
+                        <option value="smooth">Smooth</option>
+                        <!-- Add other options as needed -->
+                    </select><br>
+                </div>
+            </div>
 
-<br><br><br>
+            <!-- Dropdown field for spore print color -->
+            <div class="input-row">
+                <label for="sporecolor">Spore Print Color:</label><br>
+                <select id="sporecolor" name="sporecolor" required="required" style="width: 100%;">
+                    <option value="">What color is the spore print?</option>
+                    <option value="black">Black</option>
+                    <option value="brown">Brown</option>
+                    <option value="buff">Buff (pale yellowish-brown)</option>
+                    <option value="chocolate">Chocolate (very dark brown)</option>
+                    <option value="green">Green</option>
+                    <option value="gray">Gray</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="purple">Purple</option>
+                    <option value="white">White</option>
+                    <option value="yellow">Yellow</option>
+                </select><br>
+            </div>
+            
+                            
+            <!-- Dropdown field for bruises -->
+            <div class="input-row">
+                <label for="bruises">Bruises:</label><br>
+                <select id="bruises" name="bruises" required="required" style="width: 100%;">
+                    <option value="">Does it have any visible bruises?</option>
+                    <option value="bruises">Bruises</option>
+                    <option value="no">No</option>
+                    <!-- Add other options as needed -->
+                </select><br>
+            </div>
 
-
+            <br>
+             <!-- Button to reset form -->
+            <button><a href="/mushroom">Reset</a></button>
+            <br><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict Edibility</button>
+            </form>
+            <!-- Display error messages -->
+            <div id="error-messages">{{ error_message }}</div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+<br><br>
 {% endblock %}

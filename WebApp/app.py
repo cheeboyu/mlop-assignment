@@ -9,9 +9,12 @@ app = Flask(__name__)
 
 # Load the trained machine learning model
 rental_model = load("models/boyu_model.pkl")
+mushroom_model = load("models/final_mushroom_model2.pkl")
 
 # Define the columns for input features
 rental_cols = ['bathrooms', 'bedrooms', 'accommodates', 'beds', 'review_scores_rating']
+mushroom_cols = ['odor', 'spore-print-color', 'gill-color', 'ring-type',
+                 'gill-size', 'bruises', 'gill-spacing', 'cap-shape', 'cap-color', 'cap-surface']
 
 # Define route for the home page
 @app.route("/")
@@ -67,6 +70,54 @@ def predict_rental():
 
     else:
         return render_template("rental.html", submitted=False)
+
+
+@app.route('/mushroom', methods=['GET', 'POST'])
+def predict_mushroom():
+    if request.method == "POST":
+        # Get input values from the form
+        odor = request.form.get('odor', '')
+        sporecolor = request.form.get('sporecolor', '')
+        gillcolor = request.form.get('gillcolor', '')
+        ringtype = request.form.get('ringtype', '')
+        gillsize = request.form.get('gillsize', '')
+        bruises = request.form.get('bruises', '')
+        gillspacing = request.form.get('gillspacing', '')
+        capshape = request.form.get('capshape', '')
+        capcolor = request.form.get('capcolor', '')
+        capsurface = request.form.get('capsurface', '')
+
+        # Validate input fields
+        # fields_to_validate2 = ['odor','spore-print-color','gill-color','ring-type','gill-size', 'bruises', 'gill-spacing', 'cap-shape','cap-color','cap-surface']
+
+        # Validate input fields
+        if not all([odor, sporecolor, gillcolor, ringtype, gillsize, bruises, gillspacing, capshape, capcolor, capsurface]):
+            return render_template("mushroom.html", error_message="Please fill in all the fields.")
+
+        # Create DataFrame with input values
+        data_unseen2 = pd.DataFrame({
+            'odor': [odor],
+            'spore-print-color': [sporecolor],
+            'gill-color': [gillcolor],
+            'ring-type': [ringtype],
+            'gill-size': [gillsize],
+            'bruises': [bruises],
+            'gill-spacing': [gillspacing],
+            'cap-shape': [capshape],
+            'cap-color': [capcolor],
+            'cap-surface': [capsurface]
+        })
+
+        # Perform prediction
+        prediction2 = mushroom_model.predict(data_unseen2)
+        predictionlabel = prediction2[0]
+        print("Prediction:", predictionlabel)  # for debugging
+
+        # Render template with prediction result
+        return render_template("mushroom.html", predictionlabel=predictionlabel, odor=odor, bruises=bruises, submitted=True)
+
+    else:
+        return render_template("mushroom.html", submitted=False)
 
 # Run the Flask web application
 if __name__ == "__main__":
